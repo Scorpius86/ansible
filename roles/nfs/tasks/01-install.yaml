@@ -63,9 +63,7 @@
   shell: pvcreate /dev/sdb
     
 - name: Create volume group
-  lvol:
-    vg: data_vg
-    pvs: /dev/sdb
+  shell: vgcreate data_vg /dev/sdb    
 
 - name: Check volume group
   shell: vgdisplay data_vg
