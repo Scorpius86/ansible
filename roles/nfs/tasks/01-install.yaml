@@ -61,7 +61,7 @@
 
 - name: Create physical volume
   shell: pvcreate /dev/sdb
-    
+
 - name: Create volume group
   shell: vgcreate data_vg /dev/sdb    
 
