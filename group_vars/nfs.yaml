@@ -1,0 +1,10 @@
+---
+
+epel-release_rpms: ['epel-release']
+nfs-utils net-tools_rpms: ['nfs-utils net-tools']
+
+cloud-utils-growpart.x86_64_debs: ['haproxy']
+nfs-utils net-tools_rpms_debs: ['nfs-utils net-tools']
+
+apache1_ip: '192.168.1.141'
+apache2_ip: '192.168.1.142'

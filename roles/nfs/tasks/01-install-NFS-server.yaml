@@ -1,0 +1,30 @@
+---
+######################################## Red Hat ########################################
+- name: Install epel-release (Red Hat)
+  dnf:
+    name: "{{ epel-release_rpms }}"
+    state: present
+  become: yes
+  when: ansible_os_family == 'RedHat'
+
+- name: Install cloud-utils-growpart.x86_64 (Red Hat)
+  dnf:
+    name: "{{ cloud-utils-growpart.x86_64_rpms }}"
+    state: present
+  become: yes
+  when: ansible_os_family == 'RedHat'
+
+######################################### Debian ########################################
+- name: Install epel-release (Debian)
+  apt:
+    name: "{{ epel-release_debs }}"
+    state: present
+  become: yes
+  when: ansible_os_family == 'Debian'
+
+- name: install cloud-utils-growpart.x86_64 (Debian)
+  apt:
+    name: "{{ cloud-utils-growpart.x86_64_debs }}"
+    state: present
+  become: yes
+  when: ansible_os_family == 'Debian'
