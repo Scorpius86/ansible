@@ -55,3 +55,7 @@
     state: present
   become: yes
   when: ansible_os_family == 'Debian'
+######################################### Cross ########################################
+- name: Identifying the data disk
+  ansible.builtin.shell:
+    cmd: lsblk
