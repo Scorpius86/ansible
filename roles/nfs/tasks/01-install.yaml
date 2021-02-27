@@ -72,7 +72,7 @@
   lvol:
     vg: data_vg
     lv: nfs_lv
-    size: 10g
+    size: 9.9g
 
 - name: Check Logical volume
   shell: lvs
